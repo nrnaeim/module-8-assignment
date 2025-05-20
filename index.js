@@ -27,7 +27,7 @@ document
   .querySelector(".clear")
   .addEventListener("click", () => (display.value = ""));
 
-//evaluate button handler
+//evaluate or = button handler
 document.querySelector(".evaluate").addEventListener("click", () => {
   const displayValue = display.value;
   if (["+", "-", "/", "*"].includes(displayValue[displayValue.length - 1])) {
