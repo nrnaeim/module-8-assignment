@@ -32,15 +32,15 @@
     gap: 10px;
     .btn {
       border: 1px solid rgb(158, 158, 158);
-      border-radius: 3px;
+      border-radius: 50%;
       width: 55px;
       height: 55px;
       font-size: 2rem;
       font-weight: bold;
-
       display: flex;
       justify-content: center;
       align-items: center;
+      box-shadow: 1px 1px 28px rgb(112, 112, 112) inset;
     }
   }
 }
