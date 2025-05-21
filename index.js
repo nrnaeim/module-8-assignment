@@ -29,13 +29,17 @@ document
 
 //evaluate or = button handler
 document.querySelector(".evaluate").addEventListener("click", () => {
-  const displayValue = display.value;
-  if (["+", "-", "/", "*"].includes(displayValue[displayValue.length - 1])) {
-    const evaluateString = displayValue.slice(0, displayValue.length - 1);
-    const result = eval(evaluateString);
-    display.value = result;
-  } else {
-    const result = eval(display.value);
-    display.value = result;
+  try {
+    const displayValue = display.value;
+    if (["+", "-", "/", "*"].includes(displayValue[displayValue.length - 1])) {
+      const evaluateString = displayValue.slice(0, displayValue.length - 1);
+      const result = eval(evaluateString);
+      display.value = result;
+    } else {
+      const result = eval(display.value);
+      display.value = result;
+    }
+  } catch (err) {
+    console.log(err);
   }
 });
