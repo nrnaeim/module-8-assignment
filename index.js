@@ -43,3 +43,14 @@ document.querySelector(".evaluate").addEventListener("click", () => {
     console.log(err);
   }
 });
+
+document.querySelector("#open").addEventListener("click", () => {
+  document.querySelector(".calculator").style.display = "flex";
+  document.querySelector(".modalOpener").style.display = "none";
+});
+
+document.querySelector("#closeModal").addEventListener("click", () => {
+  document.querySelector(".calculator").style.display = "node";
+  document.querySelector(".modalOpener").style.display = "flex";
+  display.value = "";
+});
