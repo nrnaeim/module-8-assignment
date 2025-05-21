@@ -28,7 +28,9 @@ document.querySelectorAll(".inputBtn").forEach((btn) => {
       ) {
         //no code if last character is an operator
       } else {
-        display.value += clickedBtn;
+        if (display.value.length <= 10) {
+          display.value += clickedBtn;
+        }
       }
     }
   });
